@@ -1,11 +1,8 @@
 import './App.css';
+import LandingPage from './LandingPage';
 
 function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+  return <LandingPage />;
 }
 
 export default App;
