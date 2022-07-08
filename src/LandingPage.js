@@ -2,16 +2,14 @@ import Form from './Form';
 
 const LandingPage = () => {
   return (
-    <>
-      <header>
-        <div className='titleContainer'>
+    <div className='fullscreen'>
+      <header className='wrapper'>
           <h1>battle rockets</h1>
-        </div>
       </header>
       <main>
         <Form />
       </main>
-    </>
+    </div>
   );
 };
 

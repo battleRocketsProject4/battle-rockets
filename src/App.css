@@ -17,12 +17,20 @@ body {
   font-size: 1rem;
 }
 
+.wrapper {
+  max-width: 1260px;
+  width: 90%;
+  margin: 0 auto;
+}
+
 h1 {
   font-family: 'Rubik Moonrocks', cursive;
   text-transform: uppercase;
-  font-size: 6vw;
+  font-size: 6.5vw;
   color: #FCBF49;
   text-align: center;
+  margin: 0;
+  padding: 30px 0;
 }
 
 h2, p, a, label, input, button {
@@ -33,12 +41,58 @@ h2, p, a, label, input, button {
 p {
   color: #ffffff;
   font-weight: 500;
+  margin: 0;
 }
 
+/* Button styles start */
+button {
+  background-color: #D62828;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  margin: 15px 0;
+  transition: background-color 1s ease, color 1s ease;
+  cursor: pointer;
+}
+
+button:hover, button:focus {
+  background-color: #FCBF49;
+  color: #D62828;;
+}
+
+/* Button styles end */
+
+
+.fullscreen {
+  height: 100vh;
+  position: relative;
+}
+
+.rocket {
+
+  max-height: 300px;
+
+  
+}
 /* Form styles start */
 
+form {
+  background: center / contain no-repeat url(./assets/planet.svg);
+  height: 60vh;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
 label {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #ffffff;
 }
 
@@ -49,24 +103,38 @@ a:hover, a:focus {
   color: #FCBF49;
 }
 
+.inputContainer {
+  margin: 15px 0;
+}
+
+.inputContainer input:first-of-type{
+  margin-right: 10px;
+}
+
 input {
   border-radius: 5px;
   border: none;
   padding: 8px 10px;
   font-size: 1.1rem;
+  font-weight: 500;
   color: #003049;
 }
 
 /* Form styles end */
 
-/* Button styles start */
-button {
-  background-color: #D62828;
-  border: 1px solid #D62828;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  color: #ffffff;
-  text-transform: uppercase;
-  padding: 10px 15px;
+
+/* Media queries start */
+/* large screens */
+@media (min-width: 2000px) {
+  h1 {
+    font-size: 6.6rem;
+  }
+
 }
-/* Button styles end */
+
+/* Tablet screens */
+@media (max-width: 900px) {}
+
+/* Mobile screens */
+@media (max-width: 450px){}
+/* Media queries end */
