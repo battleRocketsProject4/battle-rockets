@@ -81,21 +81,26 @@ span {
 }
 .fullscreen {
   background: center / cover url(./assets/starBackground-8.png);
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 header {
   flex: 0 1 auto;
-}
+ }
 
 main {
-  flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} 
+.formContainer {
   display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-  grid-template-rows: 2fr 0.5fr 1fr;
-  min-height: 0px;
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+      grid-template-rows: 1.5fr 0.5fr 1fr;
 }
 
 .rocket {
@@ -112,7 +117,7 @@ form {
   grid-area:1 / 2 / 3 / 4;;
 }
 
-.formContainer {
+.formContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -162,6 +167,7 @@ input {
   background-color: transparent;
 }
 
+
 footer {
   text-align: center;
   padding: 20px 0;
@@ -201,9 +207,10 @@ footer a:hover, footer a:focus {
     font-size: .9rem;
   }
 
-  main {
-      grid-template-columns: 1fr;
-      grid-template-rows: 2fr 0.5fr 1fr;
+  .formContainer {
+      grid-auto-columns: 1fr;
+  grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 0.5fr 1fr;
     }
   
     form {

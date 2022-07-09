@@ -4,11 +4,10 @@ import Modal from './Modal';
 
 const Form = () => {
 
-  const [modal, setModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   const handleModalClick = () => {
-    console.log('button has been clicked');
-    setModal(true);
+    setOpenModal(true);
   }
 
   const handleSubmit = (event) => {
@@ -16,12 +15,12 @@ const Form = () => {
   }
 
   return (
-    <>
+    <section className="formContainer">
       <form 
         action='submit'
         onSubmit={handleSubmit}
       >
-        <div className="formContainer">
+        <div className="formContent">
           <label htmlFor='playerName'>Astronauts, enter your name</label>
           <div className='inputContainer'>
             <input type='text' id='playerName' placeholder='Astronaut 1' />
@@ -38,8 +37,8 @@ const Form = () => {
         </div>
       </form>
       <img className='rocket' src={rocketImage} alt='graphic of a rocket ship taking off '/>
-      {modal && <Modal />}
-    </>
+      {openModal && <Modal setOpenModal={setOpenModal}/>}
+    </section>
   );
 };
 
