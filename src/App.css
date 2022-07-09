@@ -44,6 +44,12 @@ p {
   margin: 0;
 }
 
+a, .learnMoreBtn{
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: none;
+}
+
 img {
   width: 100%;
   max-width: 100%;
@@ -119,15 +125,6 @@ label {
   color: #ffffff;
 }
 
-a {
-  color: #003049;
-  font-weight: 700;
-  transition: color 1s ease;
-}
-a:hover, a:focus {
-  color: #D62828;
-}
-
 .inputContainer {
   margin: 15px 0;
   display: flex;
@@ -146,6 +143,23 @@ input {
   font-weight: 500;
   color: #003049;
   width: 40%;
+}
+
+.learnMoreBtn {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: underline;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  transition: color 1s ease, text-decoration 1s ease;
+}
+
+.learnMoreBtn:hover,
+.learnMoreBtn:focus {
+  color: #D62828;
+  text-decoration: none;
+  background-color: transparent;
 }
 
 footer {
@@ -183,7 +197,7 @@ footer a:hover, footer a:focus {
       font-size: 9vw;
     }
 
-  p, a {
+  p, a, .learnMoreBtn {
     font-size: .9rem;
   }
 
@@ -220,7 +234,7 @@ footer a:hover, footer a:focus {
     font-size: 14vw;
   }
   
-  p, a {
+  p, a, .learnMoreBtn {
     font-size: .7rem;
   }
 
