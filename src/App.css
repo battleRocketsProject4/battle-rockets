@@ -51,7 +51,6 @@ img {
   display: block;
 }
 
-/* Button styles start */
 button {
   background-color: #D62828;
   border: none;
@@ -70,9 +69,6 @@ button:hover, button:focus {
   background-color: #FCBF49;
   color: #D62828;;
 }
-
-/* Button styles end */
-
 
 .fullscreen {
   height: 100vh;
@@ -98,10 +94,8 @@ main {
   align-self: flex-end;
 }
 
-/* Form styles start */
-
 form {
-  background: bottom / contain no-repeat url(./assets/planet.svg);
+  background: center / contain no-repeat url(./assets/planet.svg);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -113,10 +107,11 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 
 label {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #ffffff;
 }
 
@@ -141,13 +136,11 @@ input {
   border-radius: 5px;
   border: none;
   padding: 5px 10px;
+    font-size: 1rem;
   font-weight: 500;
   color: #003049;
-  width: 45%;
+  width: 40%;
 }
-
-/* Form styles end */
-
 
 /* Media queries start */
 /* large screens */
@@ -158,27 +151,75 @@ input {
 }
 
 /* Tablet screens */
-@media (max-width: 900px) {
-    main {
-        grid-template-columns: 1fr;
-        grid-template-rows: 2fr 0.5fr 1fr;
-      }
-    
-      form {
-        background: center / contain no-repeat url(./assets/planet.svg);
-        grid-area: 1 / 1 / 3 / 2;
-    
-      }
-    
-      .rocket {
-        grid-area: 2 / 1 / 4 / 2;
-      }
+@media (max-width: 800px) {
+  h1 {
+      font-size: 9vw;
+    }
+
+  p {
+    font-size: .9rem;
+  }
+
+  main {
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 0.5fr 1fr;
+    }
+  
+    form {
+      grid-area: 1 / 1 / 3 / 2;
+  
+    }
+  
+    .rocket {
+      grid-area: 2 / 1 / 4 / 2;
+    }
+
+    label {
+      font-size: 1.3rem;
+    }
+
+    input {
+      font-size: .9rem;
+    }
+
+    button {
+      font-size: 1rem;
+    }
 }
 
 /* Mobile screens */
-@media (max-width: 550px){
+@media (max-width: 480px){
+  h1 {
+    font-size: 14vw;
+  }
+  
+  p {
+    font-size: .7rem;
+  }
 
+  form p {
+    text-align: center;
+  }
+  label {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .inputContainer {
+    flex-direction: column;
+    margin: 5px 0;
+  }
 
+  input {
+    font-size: .7rem;
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  button {
+    margin: 8px 0;
+    font-size: .9rem;
+  }
 
 }
 /* Media queries end */
