@@ -11,7 +11,7 @@ const Form = () => {
             <input type='text' id='playerName' placeholder='Astronaut 2' />
           </div>
           <p>
-            Never played Battle Rockets before? <a href='#'>Click here</a>
+            Never played Battle Rockets before?  <span><a href='#'>Click here</a></span>
           </p>
           <button>take off!</button>
         </div>

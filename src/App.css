@@ -13,7 +13,7 @@ html {
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 body {
-  background: center / cover url(./assets/starBackground-8.png) #003049;
+  background-color: #003049;
   font-size: 1rem;
 }
 
@@ -70,7 +70,11 @@ button:hover, button:focus {
   color: #D62828;;
 }
 
+span {
+  display: inline-block;
+}
 .fullscreen {
+  background: center / cover url(./assets/starBackground-8.png);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -116,10 +120,12 @@ label {
 }
 
 a {
-  color: #D62828;
+  color: #003049;
+  font-weight: 700;
+  transition: color 1s ease;
 }
 a:hover, a:focus {
-  color: #FCBF49;
+  color: #D62828;
 }
 
 .inputContainer {
@@ -142,6 +148,27 @@ input {
   width: 40%;
 }
 
+footer {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px #7BB3C6 solid;
+}
+
+footer p {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+footer a {
+  color: #ffffff;
+  margin:0 10px;
+  transition: color 1s ease, text-decoration 1s ease;
+}
+
+footer a:hover, footer a:focus {
+  color: #D62828;
+  text-decoration: none;
+}
 /* Media queries start */
 /* large screens */
 @media (min-width: 2000px) {
@@ -156,7 +183,7 @@ input {
       font-size: 9vw;
     }
 
-  p {
+  p, a {
     font-size: .9rem;
   }
 
@@ -193,7 +220,7 @@ input {
     font-size: 14vw;
   }
   
-  p {
+  p, a {
     font-size: .7rem;
   }
 
