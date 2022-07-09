@@ -6,7 +6,7 @@ const LandingPage = () => {
       <header className='wrapper'>
           <h1>battle rockets</h1>
       </header>
-      <main>
+      <main className='wrapper'>
         <Form />
       </main>
     </div>

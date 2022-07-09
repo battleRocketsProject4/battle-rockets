@@ -44,6 +44,13 @@ p {
   margin: 0;
 }
 
+img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
 /* Button styles start */
 button {
   background-color: #D62828;
@@ -69,30 +76,47 @@ button:hover, button:focus {
 
 .fullscreen {
   height: 100vh;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  flex: 0 1 auto;
+}
+
+main {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+  grid-template-rows: 2fr 0.5fr 1fr;
+  min-height: 0px;
 }
 
 .rocket {
-
-  max-height: 300px;
-
-  
+  grid-area: 2 / 2 / 4 / 4;
+  z-index: 2;
+  align-self: flex-end;
 }
+
 /* Form styles start */
 
 form {
-  background: center / contain no-repeat url(./assets/planet.svg);
-  height: 60vh;
-  max-height: 600px;
+  background: bottom / contain no-repeat url(./assets/planet.svg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-area:1 / 2 / 3 / 4;;
+}
+
+.formContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
 label {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #ffffff;
 }
 
@@ -105,6 +129,8 @@ a:hover, a:focus {
 
 .inputContainer {
   margin: 15px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .inputContainer input:first-of-type{
@@ -114,10 +140,10 @@ a:hover, a:focus {
 input {
   border-radius: 5px;
   border: none;
-  padding: 8px 10px;
-  font-size: 1.1rem;
+  padding: 5px 10px;
   font-weight: 500;
   color: #003049;
+  width: 45%;
 }
 
 /* Form styles end */
@@ -129,12 +155,30 @@ input {
   h1 {
     font-size: 6.6rem;
   }
-
 }
 
 /* Tablet screens */
-@media (max-width: 900px) {}
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 0.5fr 1fr;
+      }
+    
+      form {
+        background: center / contain no-repeat url(./assets/planet.svg);
+        grid-area: 1 / 1 / 3 / 2;
+    
+      }
+    
+      .rocket {
+        grid-area: 2 / 1 / 4 / 2;
+      }
+}
 
 /* Mobile screens */
-@media (max-width: 450px){}
+@media (max-width: 550px){
+
+
+
+}
 /* Media queries end */
