@@ -13,7 +13,7 @@ const Footer = () => {
                     <a href="#">Sarah Pageau</a>
                 </span>
                 <span>
-                    <a href="#">Hanson Wong</a>
+                    <a href="https://www.hansonwong.dev/">Hanson Wong</a>
                 </span>
             </div>
         </footer>
