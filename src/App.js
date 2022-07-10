@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import './App.css';
+import LandingPage from './LandingPage';
+<<<<<<< HEAD
 import RocketData from './RocketData';
 function App() {
 
@@ -21,6 +23,7 @@ function App() {
 
   return (
     <div className="App">
+       <LandingPage />;
       <div className="rocketDataContainer">
         {rocketsData.map((rocketDetail) => {
           return((
@@ -37,6 +40,5 @@ function App() {
       </div>
     </div>
   );
-}
 
 export default App;
