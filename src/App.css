@@ -35,7 +35,12 @@ h1 {
 
 h2, p, a, label, input, button {
   font-family: 'Chakra Petch', sans-serif;
-  font-weight: 600;
+}
+
+h2 {
+  color: #D62828;
+  font-size: 2rem;  
+  margin: 0;
 }
 
 p {
@@ -81,7 +86,7 @@ span {
 }
 .fullscreen {
   background: center / cover url(./assets/starBackground-8.png);
-  min-height: 100vh;
+  height: 100vh;
   max-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -96,16 +101,17 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    overflow: auto;
 } 
 .formContainer {
   display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-      grid-template-rows: 1.5fr 0.5fr 1fr;
+  grid-auto-flow: column;
+  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+  grid-template-rows: 2fr 1fr 0.5fr;
 }
 
 .rocket {
   grid-area: 2 / 2 / 4 / 4;
-  z-index: 2;
   align-self: flex-end;
 }
 
@@ -114,7 +120,8 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  grid-area:1 / 2 / 3 / 4;;
+  grid-area:1 / 2 / 3 / 4;
+  min-width: 0;
 }
 
 .formContent {
@@ -127,6 +134,7 @@ form {
 
 label {
   font-size: 1.6rem;
+  font-weight: 600;
   color: #ffffff;
 }
 
@@ -144,10 +152,52 @@ input {
   border-radius: 5px;
   border: none;
   padding: 5px 10px;
-    font-size: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
   font-weight: 500;
   color: #003049;
   width: 40%;
+}
+
+.modal {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+    background: center / contain no-repeat url(./assets/moon.svg);
+    width: 90%;
+    max-width: 900px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.modalContent p {
+  color: #003049;
+  width: 80%;
+}
+
+.exit {
+  color: #003049;
+  font-size: 1.4rem;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 35%;
+  right: 14%;
+  transition: color 1s ease;
 }
 
 .learnMoreBtn {
@@ -161,12 +211,13 @@ input {
 }
 
 .learnMoreBtn:hover,
-.learnMoreBtn:focus {
+.learnMoreBtn:focus, 
+.exit:hover,
+.exit:focus {
   color: #D62828;
   text-decoration: none;
   background-color: transparent;
 }
-
 
 footer {
   text-align: center;
@@ -200,39 +251,47 @@ footer a:hover, footer a:focus {
 /* Tablet screens */
 @media (max-width: 800px) {
   h1 {
-      font-size: 9vw;
-    }
+    font-size: 9vw;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
 
   p, a, .learnMoreBtn {
-    font-size: .9rem;
+    font-size: .8rem;
   }
 
   .formContainer {
-      grid-auto-columns: 1fr;
-  grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1.5fr 0.5fr 1fr;
     }
   
-    form {
-      grid-area: 1 / 1 / 3 / 2;
+  form {
+    grid-area: 1 / 1 / 3 / 2;
+
+  }
   
-    }
-  
-    .rocket {
-      grid-area: 2 / 1 / 4 / 2;
-    }
+  .rocket {
+    grid-area: 2 / 1 / 4 / 2;
+  }
 
-    label {
-      font-size: 1.3rem;
-    }
+  label {
+    font-size: 1.3rem;
+  }
 
-    input {
-      font-size: .9rem;
-    }
+  input {
+    font-size: .9rem;
+  }
 
-    button {
-      font-size: 1rem;
-    }
+  button {
+    font-size: 1rem;
+  }
+
+  .exit {
+    font-size: 1.3rem;
+  }
 }
 
 /* Mobile screens */
@@ -241,8 +300,12 @@ footer a:hover, footer a:focus {
     font-size: 14vw;
   }
   
+  h2 {
+    font-size: 1.5rem;
+  }
+
   p, a, .learnMoreBtn {
-    font-size: .7rem;
+    font-size: .6rem;
   }
 
   form p {
@@ -269,5 +332,9 @@ footer a:hover, footer a:focus {
     font-size: .9rem;
   }
 
+  .exit {
+    font-size: 1.2rem;
+    top: 37%;
+  }
 }
 /* Media queries end */
