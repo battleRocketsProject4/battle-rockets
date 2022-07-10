@@ -11,8 +11,6 @@ const LandingPage = () => {
             <h1>battle rockets</h1>
         </header>
         <main className='wrapper'>
-          {/* <Form /> */}
-          {/* <ErrorPage /> */}
           <Routes>
             <Route path='/' element={<Form />} />
 

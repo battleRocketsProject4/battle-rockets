@@ -1,8 +1,8 @@
 const ErrorPage = () => {
     return (
-        <section className="error">
-            <h2>404!</h2>
-            <p>Looks like you are lost in space</p>
+        <section className="errorPage">
+            <h2>404</h2>
+            <p>Looks like you <span>are lost in space</span></p>
         </section>
     )
 }
