@@ -524,6 +524,17 @@ input {
   padding: 10px;
 }
 
+.shipsContainer {
+  border: 1px solid black;
+  height: 100px;
+}
+
+.player1Container,
+.player2Container {
+  border: 1px solid black;
+  height: 100px;
+}
+
 footer {
   text-align: center;
   padding: 20px 0;

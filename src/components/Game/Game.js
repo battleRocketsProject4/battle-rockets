@@ -1,7 +1,13 @@
 import Board from './Board';
+import Ship from './Ship';
 
 const Game = () => {
-  return <Board />;
+  return (
+    <>
+      <Ship />
+      <Board />
+    </>
+  );
 };
 
 export default Game;
