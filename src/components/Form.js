@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import rocketImage from '../assets/rocket.svg';
 import Modal from './Modal';
 
@@ -34,7 +35,9 @@ const Form = () => {
                 onClick={handleModalClick}
               >Click here</button>
             </p>
-            <button>take off!</button>
+            <Link to={`/rockets`}>
+              <button>take off!</button>
+            </Link>
           </div>
         </form>
         <img aria-hidden="true" className='rocket' src={rocketImage} alt='graphic of a rocket ship taking off ' />
