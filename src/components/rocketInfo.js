@@ -4,11 +4,11 @@ const allRockets = [
     length: 2,
   },
   {
-    name: `Falcon 9`,
+    name: `Falcon Heavy`,
     length: 3,
   },
   {
-    name: `Falcon Heavy`,
+    name: `Falcon 9`,
     length: 4,
   },
   {
@@ -16,3 +16,5 @@ const allRockets = [
     length: 5,
   },
 ];
+
+export default allRockets;
