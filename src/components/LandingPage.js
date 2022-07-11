@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom'
-import Form from './Form';
+import Form from './Form'
 import ErrorPage from './ErrorPage';
 import Footer from './Footer';
 

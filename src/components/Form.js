@@ -1,5 +1,5 @@
 import { useState } from "react";
-import rocketImage from './assets/rocket.svg';
+import rocketImage from '../assets/rocket.svg';
 import Modal from './Modal';
 
 const Form = () => {

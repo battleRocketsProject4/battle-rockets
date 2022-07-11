@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import './App.css';
-import LandingPage from './LandingPage';
-import RocketData from './RocketData';
+import LandingPage from './components/LandingPage';
+import RocketData from './components/RocketData';
 function App() {
 
   const [rocketsData, setRocketsData] = useState([])
