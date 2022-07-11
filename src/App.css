@@ -517,22 +517,46 @@ input {
   flex-wrap: wrap;
 }
 
-.emptysquare {
+.emptysquare,
+.square {
   border: 1px solid black;
   width: 10%;
   height: 10%;
   padding: 10px;
 }
 
+.shipSquares {
+  display: flex;
+}
+
+.ship:hover,
+.ship:focus {
+  cursor: pointer;
+}
+
 .shipsContainer {
   border: 1px solid black;
-  height: 100px;
 }
 
 .player1Container,
 .player2Container {
   border: 1px solid black;
   height: 100px;
+}
+
+.tile,
+.rocketplaced {
+  height: 20px;
+  width: 20px;
+  border: 1px solid black;
+}
+
+.dark {
+  background: black;
+}
+
+.rocketplaced {
+  background: red;
 }
 
 footer {

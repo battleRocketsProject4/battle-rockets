@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import LandingPage from './components/LandingPage';
 import RocketData from './components/RocketData';
-import Game from './components/Game/Board';
+import Game from './components/Game/Game';
+
 function App() {
   const [rocketsData, setRocketsData] = useState([]);
 
