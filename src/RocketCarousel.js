@@ -1,28 +1,69 @@
-import React, { useState } from "react";
-import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
+const { Component, cloneElement } = require("react");
 
-const Slider = ({ slides }) => {
-    const [current, setCurrent] = useState(0);
-    const length = slides.length; 
-
-    const nextSlide = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1);
+class Carousel extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            position: 0,
+            direction: props.children.length === 2 ? 'prev' : 'next',
+            sliding: false
+        };
     }
 
-    const prevSlide = () => {
-        setCurrent(current === 0 ? length - 1 : current - 1);
+    getOrder(itemIndex) {
+        const { position } = this.state;
+        const { children } = this.props;
+        const numItems = children.length;
+
+        if (numItems === 2) return itemIndex;
+
+        if (itemIndex - position < 0)
+            return numItems - Math.abs(itemIndex - position);
+        return itemIndex - position;
+    }
+
+    doSliding = (direction, position) => {
+        this.setState({
+            sliding: true,
+            direction,
+            position
+        });
+
+    setTimeout(() =>{
+        this.setState({
+            sliding: false
+        });
+    }, 50);
     };
 
-    return (
-        <div>
-        <FaChevronRight className='right-arrow' onClick={nextSlide} />
-        <FaChevronRight className='left-arrow' onClick={prevSlide} />
-        {slides.map((slides, index) => {
-            return (
-                <div key={index}>
-                    {index === current && }
-            )
-        })}
-        </div>
-    )
+    nextSlide = () => {
+        const { position } = this.state;
+        const { children } = this.props;
+        const numItems = children.length; 
+
+        if (numItems === 2 && position === 1) return;
+
+        this.doSliding("next", position === numItems - 1 ? 0 : position + 1);
+    };
+
+    prevSlide = () => {
+        const { position } = this.state;
+        const { children } = this.props;
+        const numItems = children.length;
+
+        if (numItems === 2 && position === 0) return;
+        
+        this.doSliding('prev', position === 0 ? numItems - 1 : position - 1);
+    };
+
+    render() {
+        const { children } = this.props;
+        const {sliding, direction, positon } = this.state;
+
+        const propsChildren = children.map(children, child =>{
+            cloneElement(child, {
+                numSlides: children.length || 1 
+            })
+        })
+    }
 }
