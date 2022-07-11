@@ -5,7 +5,6 @@ const Tile = () => {
 
   const handlePlaceRocket = () => {
     console.log('Tile clicked');
-
     setActive(!isActive);
   };
 
