@@ -1,13 +1,12 @@
 import IndividualShip from './IndividualShip';
-import { useState } from 'react';
-import allRockets from '../rocketInfo';
 
-const Ship = () => {
-  const handleSelectRocket = () => { };
-
+const Ship = ({ userRocketLength, setUserRocketLength }) => {
   return (
     <div className='rocketsContainer'>
-      <IndividualShip handleSelectRocket={handleSelectRocket} />
+      <IndividualShip
+        userRocketLength={userRocketLength}
+        setUserRocketLength={setUserRocketLength}
+      />
     </div>
   );
 };

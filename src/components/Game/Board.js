@@ -1,6 +1,6 @@
 import Tile from './Tile';
 
-export default function Game() {
+export default function Game({ userRocketLength, setUserRocketLength }) {
   return (
     <div className='gameContainer'>
       <div className='p1Board'>
@@ -12,12 +12,12 @@ export default function Game() {
         <Tile />
         <Tile />
         <Tile />
-        <Tile />        
         <Tile />
         <Tile />
         <Tile />
         <Tile />
-        <Tile />        
+        <Tile />
+        <Tile />
         <Tile />
         <Tile />
         <Tile />

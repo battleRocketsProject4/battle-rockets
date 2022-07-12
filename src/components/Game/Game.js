@@ -1,23 +1,36 @@
-import { useState } from 'react';
 import Board from './Board';
-import Tile from './Tile';
 import Ship from './Ship';
+import { useState } from 'react';
 
 const Game = () => {
-  return (
-      <section className="game">
-        <h2>Player one place your pieces</h2>
-        <div className='gameboards'>
-          <div className='p1Container'>
-            <Ship />
-            <Board />
-          </div>
+  const [userRocketLength, setUserRocketLength] = useState(null);
 
-          <div className='p2Container'>
-            <Ship />
-            <Board />
-          </div>
+  return (
+    <section className='game'>
+      <h2>Player one place your pieces</h2>
+      <div className='gameboards'>
+        <div className='p1Container'>
+          <Ship
+            userRocketLength={userRocketLength}
+            setUserRocketLength={setUserRocketLength}
+          />
+          <Board
+            userRocketLength={userRocketLength}
+            setUserRocketLength={setUserRocketLength}
+          />
         </div>
+
+        <div className='p2Container'>
+          <Ship
+            userRocketLength={userRocketLength}
+            setUserRocketLength={setUserRocketLength}
+          />
+          <Board
+            userRocketLength={userRocketLength}
+            setUserRocketLength={setUserRocketLength}
+          />
+        </div>
+      </div>
     </section>
   );
 };

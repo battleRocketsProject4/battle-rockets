@@ -315,6 +315,10 @@ img {
   display: block;
 }
 
+ul {
+  list-style-type: none;
+}
+
 button {
   background-color: #d62828;
   border: none;
@@ -347,7 +351,7 @@ span {
   flex-direction: column;
 }
 
-section{
+section {
   height: 80vh;
 }
 
@@ -535,19 +539,21 @@ input {
   flex-wrap: wrap;
 }
 
-.tile, .rocketplaced {
+.tile,
+.rocketplaced {
   width: 10%;
   height: 10%;
   border: 1px solid #7bb3c6;
 }
 
-.tile:hover, .tile:focus {
+.tile:hover,
+.tile:focus {
   background-color: rgba(123, 179, 198, 0.5);
 }
 
 .rocket {
-    margin: 5px 0;
-    border: 1px solid transparent;
+  margin: 5px 0;
+  border: 1px solid transparent;
 }
 
 .rocket:hover,
@@ -580,7 +586,7 @@ input {
 }
 
 .hit {
-    background: center / contain no-repeat url('./assets/hit.svg');
+  background: center / contain no-repeat url('./assets/hit.svg');
 }
 
 footer {
