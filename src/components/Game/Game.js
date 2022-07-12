@@ -3,7 +3,7 @@ import Ship from './Ship';
 import { useState } from 'react';
 
 const Game = () => {
-  const [userRocketLength, setUserRocketLength] = useState(null);
+  const [userRocketLength, setUserRocketLength] = useState([]);
 
   return (
     <section className='game'>
