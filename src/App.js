@@ -33,9 +33,6 @@ function App() {
           );
         })}
       </div>
-      <div className='game'>
-        <Game />
-      </div>
     </div>
   );
 }
