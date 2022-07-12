@@ -17,10 +17,9 @@ const Tile = ({ userRocketLength, setUserRocketLength }) => {
     setActive(!isActive);
     setTileState('rocket placed');
 
-    // for (let i = { isActive }; (i = userRocketLength); i + 1) {
-    //   setTileState('rocket placed');
-    //   setActive(!isActive);
-    // }
+    if (userRocketLength === 2) {
+      console.log(userRocketLength);
+    }
   };
 
   return (
