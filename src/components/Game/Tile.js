@@ -1,11 +1,26 @@
 import allRockets from '../rocketInfo';
 import { useState } from 'react';
+import boardCoordinates from './boardCoordinates';
 
-const Tile = () => {
+const Tile = ({ userRocketLength, setUserRocketLength }) => {
   const [isActive, setActive] = useState(true);
+
+  // const [isEmpty, setIsEmpty] = useState(true);
+  // const [isHit, setIsHit] = useState('b');
+  // const [isSunk, setIsSunk] = useState('c');
+  // const [hasMissed, setIsMissed] = useState('d');
+  // const [isSet, setIsSet] = useState('e');
+
+  const [tileState, setTileState] = useState('');
 
   const handlePlaceRocket = () => {
     setActive(!isActive);
+    setTileState('rocket placed');
+
+    // for (let i = { isActive }; (i = userRocketLength); i + 1) {
+    //   setTileState('rocket placed');
+    //   setActive(!isActive);
+    // }
   };
 
   return (

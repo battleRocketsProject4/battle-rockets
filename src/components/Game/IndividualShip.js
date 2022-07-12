@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import allRockets from '../rocketInfo';
 
 const IndividualShip = ({ userRocketLength, setUserRocketLength }) => {
@@ -12,6 +11,7 @@ const IndividualShip = ({ userRocketLength, setUserRocketLength }) => {
               onClick={() => {
                 setUserRocketLength(rocket.length);
               }}
+              key={rocket.length}
             >
               <p>{rocket.name}</p>
               {rocket.length === 2 ? (
