@@ -291,6 +291,7 @@ h2 {
   color: #d62828;
   font-size: 2rem;
   margin: 0;
+  text-align: center;
 }
 
 p {
@@ -340,10 +341,14 @@ span {
 
 .fullscreen {
   background: center / cover url(./assets/starBackground-8.png);
-  height: 100vh;
-  max-height: 100vh;
+  /* height: 100vh; */
+  /* max-height: 100vh; */
   display: flex;
   flex-direction: column;
+}
+
+section{
+  height: 80vh;
 }
 
 header {
@@ -355,7 +360,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 .formContainer {
@@ -365,7 +370,7 @@ main {
   grid-template-rows: 2fr 1fr 0.5fr;
 }
 
-.rocket {
+.rocketImg {
   grid-area: 2 / 2 / 4 / 4;
   align-self: flex-end;
 }
@@ -499,63 +504,83 @@ input {
 }
 
 /* Gameboard */
-.gameContainer {
-  /* max-width: 30%; */
-  /* border: 1px solid black; */
+.game {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gameboards {
+  display: flex;
+}
+
+.p1Container,
+.p2Container {
+  display: flex;
+}
+
+.rocketsContainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .p1Board,
 .p2Board {
-  border: 1px solid black;
+  border: 1px solid #7bb3c6;
   margin: 10px;
   display: flex;
-  width: 400px;
-  height: 400px;
+  width: 25vw;
+  height: 25vw;
   flex-wrap: wrap;
 }
 
-.emptysquare,
-.square {
-  border: 1px solid black;
+.tile, .rocketplaced {
   width: 10%;
   height: 10%;
-  padding: 10px;
+  border: 1px solid #7bb3c6;
 }
 
-.shipSquares {
-  display: flex;
+.tile:hover, .tile:focus {
+  background-color: rgba(123, 179, 198, 0.5);
 }
 
-.ship:hover,
-.ship:focus {
+.rocket {
+    margin: 5px 0;
+    border: 1px solid transparent;
+}
+
+.rocket:hover,
+.rocket:focus {
   cursor: pointer;
+  border: 1px solid #7bb3c6;
+  border-radius: 5px;
 }
 
-.shipsContainer {
-  border: 1px solid black;
-}
-
-.player1Container,
-.player2Container {
-  border: 1px solid black;
-}
-
-.tile,
-.rocketplaced {
-  height: 20px;
+.rocketPiece .square {
   width: 20px;
-  border: 1px solid black;
+  height: 20px;
+  background-color: #7bb3c6;
+  border: 1px solid #003049;
 }
 
-.dark {
-  background: black;
+.rocketPiece {
+  display: inline-flex;
+}
+
+.rocket .square:hover,
+.rocket .square:focus {
+  background-color: #7bb3c6;
+  border: 1px solid #003049;
 }
 
 .rocketplaced {
-  background: red;
+  background-color: #7bb3c6;
+  border: 1px solid #003049;
+}
+
+.hit {
+    background: center / contain no-repeat url('./assets/hit.svg');
 }
 
 footer {
@@ -606,7 +631,12 @@ footer a:focus {
     font-size: 0.8rem;
   }
 
+  section {
+    height: 100%;
+  }
+
   .formContainer {
+    height: 80vh;
     grid-auto-columns: 1fr;
     grid-template-columns: 1fr;
     grid-template-rows: 1.5fr 0.5fr 1fr;
@@ -616,7 +646,7 @@ footer a:focus {
     grid-area: 1 / 1 / 3 / 2;
   }
 
-  .rocket {
+  .rocketImg {
     grid-area: 2 / 1 / 4 / 2;
   }
 
@@ -634,6 +664,34 @@ footer a:focus {
 
   .exit {
     font-size: 1.3rem;
+  }
+
+  .gameboards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .p1Board,
+  .p2Board {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .p1Container,
+  .p2Container {
+    flex-direction: column;
+  }
+
+  .p1Rockets {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .rocket {
+    margin: 0 5px;
+  }
+
+  .gameContainer {
+    margin: 0 auto;
   }
 
   .errorPage {
@@ -695,6 +753,11 @@ footer a:focus {
   .exit {
     font-size: 1.2rem;
     top: 37%;
+  }
+
+  .rocketPiece .square {
+    width: 10px;
+    height: 10px;
   }
 
   .errorPage h2 {

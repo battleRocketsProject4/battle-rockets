@@ -9,36 +9,36 @@ const Ship = () => {
   };
 
   return (
-    <div className='shipsContainer'>
+    <div className='rocketsContainer'>
       {/* Player 1 container */}
-      <div className='player1Container'>
-        <div className='ship' id='ship1' onClick={handleSelectRocket}>
-          <div className='shipTitle'>Falcon 1</div>
-          <div className='shipSquares'>
+      <div className='p1Rockets'>
+        <div className='rocket' id='rocket1' onClick={handleSelectRocket}>
+          <p className='rocketTitle'>Falcon 1</p>
+          <div className='rocketPiece'>
             <div className='square'></div>
             <div className='square'></div>
           </div>
         </div>
-        <div className='ship' id='ship2' onClick={handleSelectRocket}>
-          <div className='shipTitle'>Falcon Heavy</div>
-          <div className='shipSquares'>
-            <div className='square'></div>
-            <div className='square'></div>
-            <div className='square'></div>
-          </div>
-        </div>
-        <div className='ship' id='ship3' onClick={handleSelectRocket}>
-          <div className='shipTitle'>Falcon 9</div>
-          <div className='shipSquares'>
-            <div className='square'></div>
+        <div className='rocket' id='rocket2' onClick={handleSelectRocket}>
+          <p className='rocketTitle'>Falcon Heavy</p>
+          <div className='rocketPiece'>
             <div className='square'></div>
             <div className='square'></div>
             <div className='square'></div>
           </div>
         </div>
-        <div className='ship' id='ship4' onClick={handleSelectRocket}>
-          <div className='shipTitle'>Starship</div>
-          <div className='shipSquares'>
+        <div className='rocket' id='rocket3' onClick={handleSelectRocket}>
+          <p className='rocketTitle'>Falcon 9</p>
+          <div className='rocketPiece'>
+            <div className='square'></div>
+            <div className='square'></div>
+            <div className='square'></div>
+            <div className='square'></div>
+          </div>
+        </div>
+        <div className='rocket' id='rocket4' onClick={handleSelectRocket}>
+          <p className='rocketTitle'>Starship</p>
+          <div className='rocketPiece'>
             <div className='square'></div>
             <div className='square'></div>
             <div className='square'></div>
@@ -50,14 +50,14 @@ const Ship = () => {
       {/* End of player 1 container */}
 
       {/* player 2 container */}
-      <div className='player2Container'>
+      {/* <div className='player2Container'>
         <div className='ship' id='ship1'>
           <div className='shipTitle'></div>
           <div className='shipSquares'>
             <div className='square'></div>
             <div className='square'></div>
           </div>
-        </div>
+        </div> */}
         {/* <div className='ship' id='ship2'>
           <div className='shipTitle'></div>
           <div className='shipSquares'>
@@ -85,7 +85,7 @@ const Ship = () => {
             <div className='square'></div>
           </div>
         </div> */}
-      </div>
+      {/* </div> */}
       {/* End of player 2 container */}
     </div>
   );

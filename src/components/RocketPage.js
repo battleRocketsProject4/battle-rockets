@@ -1,6 +1,13 @@
+import { Link } from 'react-router-dom';
+
 const RocketPage = () => {
     return (
-        <h2>Rockets</h2>
+        <div>
+            <h2>Rockets</h2>
+            <Link to={`/game`}>
+                <button>next</button>
+            </Link>
+        </div>
     );
 };
 

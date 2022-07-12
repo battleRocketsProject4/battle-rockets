@@ -40,7 +40,7 @@ const Form = () => {
             </Link>
           </div>
         </form>
-        <img aria-hidden="true" className='rocket' src={rocketImage} alt='graphic of a rocket ship taking off ' />
+        <img aria-hidden="true" className='rocketImg' src={rocketImage} alt='graphic of a rocket ship taking off ' />
       </section>
       {openModal && <Modal setOpenModal={setOpenModal} />}
     </>

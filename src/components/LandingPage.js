@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Form from './Form';
 import RocketPage from './RocketPage';
+import Game from './Game/Game'
 import ErrorPage from './ErrorPage';
 import Footer from './Footer';
 
@@ -18,6 +19,7 @@ const LandingPage = () => {
           <Routes>
             <Route path='/' element={<Form />} />
             <Route path='/rockets' element={<RocketPage />} />
+            <Route path='/game' element={<Game />} />
             <Route path='*' element={<ErrorPage />} />
           </Routes>
         </main>

@@ -1,10 +1,10 @@
 const allRockets = [
   {
-    name: `Falcon 1`,
+    name: `Falcon Heavy`,
     length: 2,
   },
   {
-    name: `Falcon Heavy`,
+    name: `Falcon 1`,
     length: 3,
   },
   {
