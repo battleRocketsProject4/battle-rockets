@@ -1,5 +1,6 @@
 import { useState } from "react";
-import rocketImage from './assets/rocket.svg';
+import { Link } from 'react-router-dom';
+import rocketImage from '../assets/rocket.svg';
 import Modal from './Modal';
 
 const Form = () => {
@@ -17,7 +18,7 @@ const Form = () => {
   return (
     <>
       <section className="formContainer">
-        <form 
+        <form
           action='submit'
           onSubmit={handleSubmit}
         >
@@ -28,18 +29,20 @@ const Form = () => {
               <input type='text' id='playerName' placeholder='Astronaut 2' />
             </div>
             <p>
-              Never played Battle Rockets before?  
-              <button 
+              Never played Battle Rockets before?
+              <button
                 className='learnMoreBtn'
                 onClick={handleModalClick}
               >Click here</button>
             </p>
-            <button>take off!</button>
+            <Link to={`/rockets`}>
+              <button>take off!</button>
+            </Link>
           </div>
         </form>
-        <img aria-hidden="true" className='rocket' src={rocketImage} alt='graphic of a rocket ship taking off '/>
+        <img aria-hidden="true" className='rocketImg' src={rocketImage} alt='graphic of a rocket ship taking off ' />
       </section>
-      { openModal && <Modal setOpenModal={setOpenModal} /> }
+      {openModal && <Modal setOpenModal={setOpenModal} />}
     </>
   );
 };
