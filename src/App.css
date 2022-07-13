@@ -358,7 +358,7 @@ section {
 
 header {
   flex: 0 1 auto;
-}
+ }
 
 main {
   flex: 1 1 auto;
@@ -837,7 +837,6 @@ footer a:focus {
   h1 {
     font-size: 14vw;
   }
-
   h2 {
     font-size: 1.5rem;
   }
