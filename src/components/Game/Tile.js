@@ -1,8 +1,6 @@
-import allRockets from '../rocketInfo';
 import { useState } from 'react';
-import boardCoordinates from './boardCoordinates';
 
-const Tile = ({ userRocketLength, setUserRocketLength }) => {
+const Tile = ({ userRocketLength, setUserRocketLength, key }) => {
   const [isActive, setActive] = useState(true);
 
   // const [isEmpty, setIsEmpty] = useState(true);
@@ -11,11 +9,11 @@ const Tile = ({ userRocketLength, setUserRocketLength }) => {
   // const [hasMissed, setIsMissed] = useState('d');
   // const [isSet, setIsSet] = useState('e');
 
-  const [tileState, setTileState] = useState('');
+  // const [tileState, setTileState] = useState('');
 
   const handlePlaceRocket = () => {
     setActive(!isActive);
-    setTileState('rocket placed');
+    // setTileState('rocket placed');
 
     if (userRocketLength === 2) {
       console.log(userRocketLength);
