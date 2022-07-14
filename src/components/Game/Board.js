@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 export default function Game({ userRocketLength }) {
 
-  const [isActive, setActive] = useState(true);
+  // const [isActive, setActive] = useState(true);
 
   // const [isEmpty, setIsEmpty] = useState(true);
   // const [isHit, setIsHit] = useState('b');
