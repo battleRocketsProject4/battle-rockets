@@ -2,7 +2,6 @@ import boardCoordinates from './boardCoordinates';
 import { useState } from 'react';
 
 export default function Game({ userRocketLength }) {
-  console.log(boardCoordinates.horizontalBoard);
 
   const [isActive, setActive] = useState(true);
 
@@ -12,7 +11,7 @@ export default function Game({ userRocketLength }) {
   // const [hasMissed, setIsMissed] = useState('d');
   // const [isSet, setIsSet] = useState('e');
 
-  // const [tileState, setTileState] = useState('');
+  const [tileState, setTileState] = useState('a');
 
   const handlePlaceRocket = (coordA, coordB) => {
     // setActive(!isActive);
@@ -22,6 +21,15 @@ export default function Game({ userRocketLength }) {
     //   console.log(userRocketLength);
     // }
 
+    // setTileState('b')
+    // console.log(boardCoordinates[coordA][coordB])
+
+    boardCoordinates[coordA][coordB] = 'b';
+    setTileState(boardCoordinates[coordA][coordB]);
+
+    console.log(tileState)
+
+    // console.log(boardCoordinates[coordA][coordB])
     console.log(coordA, coordB)
   };
 
@@ -30,10 +38,9 @@ export default function Game({ userRocketLength }) {
       <div className='p1Board'>
         {boardCoordinates.map((board, outerIndex) => {
           return board.map((tile, innerIndex) => {
-
             return (
               <div
-                className='tile'
+                className={`tile ${tileState}`}
                 onClick={() => {
                   handlePlaceRocket(outerIndex, innerIndex)
                 }}

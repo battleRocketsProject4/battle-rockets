@@ -591,11 +591,13 @@ input {
 }
 
 .tile,
-.rocketplaced {
+.b{
   width: 10%;
   height: 10%;
   border: 1px solid #7bb3c6;
 }
+
+
 
 .tile:hover,
 .tile:focus {
@@ -631,7 +633,7 @@ input {
   border: 1px solid #003049;
 }
 
-.rocketplaced {
+.b {
   background-color: #7bb3c6;
   border: 1px solid #003049;
 }
