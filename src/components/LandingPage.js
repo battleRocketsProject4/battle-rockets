@@ -6,7 +6,7 @@ import Game from './Game/Game'
 import ErrorPage from './ErrorPage';
 import Footer from './Footer';
 
-const LandingPage = () => {
+const LandingPage = ({ rocketData }) => {
   return (
     <>
       <div className='fullscreen'>
@@ -18,7 +18,7 @@ const LandingPage = () => {
         <main className='wrapper'>
           <Routes>
             <Route path='/' element={<Form />} />
-            <Route path='/rockets' element={<RocketPage />} />
+            <Route path='/rockets' element={<RocketPage rocketData = { rocketData } />} />
             <Route path='/game' element={<Game />} />
             <Route path='*' element={<ErrorPage />} />
           </Routes>

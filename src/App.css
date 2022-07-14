@@ -268,17 +268,23 @@ body {
   margin: 0 auto;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   font-family: 'Rubik Moonrocks', cursive;
   text-transform: uppercase;
   font-size: 6.5vw;
   color: #fcbf49;
   text-align: center;
-  margin: 0;
   padding: 30px 0;
+  margin: 0;
 }
 
 h2,
+h3,
 p,
 a,
 label,
@@ -289,15 +295,20 @@ button {
 
 h2 {
   color: #d62828;
-  font-size: 2rem;
-  margin: 0;
+  font-size: 2.2rem;
   text-align: center;
+}
+
+h3{
+  color: #fcbf49;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 10px 0;
 }
 
 p {
   color: #ffffff;
   font-weight: 500;
-  margin: 0;
 }
 
 a,
@@ -455,8 +466,6 @@ input {
 .exit {
   color: #003049;
   font-size: 1.4rem;
-  padding: 0;
-  margin: 0;
   background-color: transparent;
   position: absolute;
   top: 35%;
@@ -469,8 +478,6 @@ input {
   font-weight: 700;
   text-decoration: underline;
   background-color: transparent;
-  padding: 0;
-  margin: 0;
   transition: color 1s ease, text-decoration 1s ease;
 }
 
@@ -505,6 +512,50 @@ input {
 
 .errorPage span {
   display: block;
+}
+
+.rocketPage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rocketPage a {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rocketDataContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rocketDataContainer ul {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.rocketDataContainer img {
+  border-radius: 2%;
+}
+
+.leftArrow, .rightArrow {
+  font-size: 3rem;
+  color: #fcbf49;
+  cursor: pointer;
+  transition: color 1s ease;
+}
+
+.leftArrow:hover,
+.leftArrow:focus,
+.rightArrow:hover,
+.rightArrow:focus {
+  color: #ffffff;
+}
+
+.button {
+  align-self: flex-end;
 }
 
 /* Gameboard */
@@ -631,6 +682,10 @@ footer a:focus {
     font-size: 1.4rem;
   }
 
+  h3 {
+    font-size: 1.2rem;
+  }
+
   p,
   a,
   .learnMoreBtn {
@@ -713,6 +768,10 @@ footer a:focus {
     font-size: 3rem;
     text-align: center;
   }
+
+  .rocketDataContainer ul {
+    width: 70%;
+  }
 }
 
 /* Mobile screens */
@@ -721,7 +780,11 @@ footer a:focus {
     font-size: 14vw;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1rem;
   }
 
   p,
@@ -773,6 +836,10 @@ footer a:focus {
     font-weight: 700;
     font-size: 2rem;
     text-align: center;
+  }
+
+  .rocketDataContainer ul {
+    width: 100%;
   }
 }
 

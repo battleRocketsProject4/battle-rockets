@@ -3,9 +3,9 @@ const RocketData = (props) => {
         <section className="RocketNames">
             <ul>
                 <li className="rocket">
-                    <h1>{props.rocketName}</h1>
-                    <p>{props.rocketInfo}</p>
                     <img src={props.rocketPic} alt="" />
+                    <h2>{props.rocketName}</h2>
+                    <p>{props.rocketInfo}</p>
                 </li>
             </ul>
         </section>

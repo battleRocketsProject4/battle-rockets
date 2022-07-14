@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
+import Carousel from './Carousel';
 
-const RocketPage = () => {
+const RocketPage = ({ rocketData }) => {
     return (
-        <div>
+        <section className='rocketPage'>
             <h2>Rockets</h2>
+            <Carousel rocketData = { rocketData }/>
             <Link to={`/game`}>
-                <button>next</button>
+                <button className='next'>next</button>
             </Link>
-        </div>
+        </section>
     );
 };
 

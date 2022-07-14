@@ -2,7 +2,6 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import './App.css';
 import LandingPage from './components/LandingPage';
-import RocketData from './components/RocketData';
 
 function App() {
   const [rocketsData, setRocketsData] = useState([]);
@@ -19,19 +18,7 @@ function App() {
 
   return (
     <div className='App'>
-      <LandingPage />;
-      <div className='rocketDataContainer'>
-        {rocketsData.map((rocketDetail) => {
-          return (
-            <RocketData
-              key={rocketDetail.id}
-              rocketName={rocketDetail.rocket_name}
-              rocketPic={rocketDetail.flickr_images}
-              rocketInfo={rocketDetail.description}
-            />
-          );
-        })}
-      </div>
+      <LandingPage rocketData={rocketsData}/>;
     </div>
   );
 }
